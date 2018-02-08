@@ -8,6 +8,9 @@ public class Lab02g
 {
 	public static void main( String[] args )
 	{
-		//add test cases		
+		Fahrenheit FAH = new Fahrenheit();
+		FAH.setFahrenheit(50);
+		FAH.getCelsius();
+		FAH.print();
 	}
 }
