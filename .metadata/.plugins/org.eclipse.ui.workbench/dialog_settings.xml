@@ -24,6 +24,7 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\silahianp1916\Desktop\Unit6-2016\Unit6-Assignments"/>
 			<item value="C:\Users\silahianp1916\Desktop\Unit5-2016\Unit5-Assignments"/>
 			<item value="C:\Users\silahianp1916\Desktop\Unit4-2016\Unit4-Assignments"/>
 			<item value="C:\Users\silahianp1916\Desktop\Unit3\Unit3HW"/>
