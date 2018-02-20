@@ -13,32 +13,31 @@ public class LetterRemover
 
 	public LetterRemover()
 	{
-		//call set
+		setRemover(sentence, lookFor);
 	}
 
-	//add in second constructor
-	
-	
-	
+	public LetterRemover(String s, char rem)
+	{
+		sentence = s;
+		lookFor = rem;
+	}
 	public void setRemover(String s, char rem)
 	{
 		sentence = s;
 		lookFor = rem;
 	}
-
 	public String removeLetters()
 	{
 		String cleaned=sentence;
-
-
-
-
-
+		while (cleaned.indexOf(lookFor) > -1) {
+			int indeX = cleaned.indexOf(lookFor);
+			cleaned = cleaned.substring(0, indeX) + cleaned.substring(indeX+1, cleaned.length());
+		}
 		return cleaned;
 	}
 
 	public String toString()
 	{
-		return sentence + " - letter to remove " + lookFor;
+		return sentence + " - letter to remove " + lookFor + "\n" + removeLetters();
 	}
 }
