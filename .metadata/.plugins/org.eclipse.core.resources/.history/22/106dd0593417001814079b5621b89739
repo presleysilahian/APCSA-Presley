@@ -45,7 +45,7 @@ public class Magpie4
 				|| findKeyword(statement, "sister") >= 0
 				|| findKeyword(statement, "brother") >= 0)
 		{
-			response = "Tell me more about your family!";
+			response = "Tell me more about your family.";
 		}
 
 		// Responses which require transformations
