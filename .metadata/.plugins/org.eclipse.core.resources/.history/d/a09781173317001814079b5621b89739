@@ -10,8 +10,6 @@ public class Lab11j
 {
    public static void main(String args[])
    {
-	   Triples trip = new Triples(100);
-	   System.out.println(trip.toString());
-	   
+
 	}
 }
