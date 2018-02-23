@@ -29,10 +29,9 @@ public class LetterRemover
 	public String removeLetters()
 	{
 		String cleaned=sentence;
-		while (cleaned.indexOf(lookFor) > -1) {
-			
-			int indeX = cleaned.indexOf(lookFor);
-			cleaned = cleaned.substring(0, indeX) + cleaned.substring(indeX, sentence.length());
+		int indeX = cleaned.indexOf(lookFor);
+		while (indeX > -1) {
+			cleaned = cleaned.substring(0, indeX) + cleaned.substring(indeX+1, cleaned.length());
 		}
 		return cleaned;
 	}
