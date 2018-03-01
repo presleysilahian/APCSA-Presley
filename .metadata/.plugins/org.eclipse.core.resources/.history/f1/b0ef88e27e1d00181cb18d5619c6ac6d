@@ -30,13 +30,10 @@ public class Deck {
 	 * @param values is an array containing all of the card point values.
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
-		cards = new Card[ranks.length * suits.length];
-		int count = 0;
-		for (int i = 0; i < ranks.length; i++) {
-			for (int j = 0; j < suits.length; j++) {
-				cards[count] = new Card(ranks[i], suits[j], values[i]);
-				count++;
-			}
+		size = ranks.length;
+		cards = new Card[size];
+		for(int i = 0; i < size; i++){
+			cards[i] = new Card(ranks[i], suits[i], values[i]);
 		}
 	}
 
@@ -65,13 +62,7 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		for (int k = 0; k < cards.length; k++) {
-			int random = (int) (Math.random() * (cards.length - 1) + 1);
-			Card tempCard = new Card("", "", 0);
-			tempCard = cards[k];
-			cards[k] = cards[random];
-			cards[random] = tempCard;
-		}
+		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
 	}
 
 	/**
