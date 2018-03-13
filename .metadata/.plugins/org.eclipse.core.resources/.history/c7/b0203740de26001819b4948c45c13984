@@ -39,6 +39,7 @@ public class Student implements Comparable<Student>
 	public void setGrade(int spot, double grade)
 	{
 		myGrades.setGrade(spot, grade);
+
 	}
 
 	public String getName()
@@ -68,7 +69,7 @@ public class Student implements Comparable<Student>
 		double newsum = 0.0;
 		double newavg = 0.0;
 		newsum = myGrades.getSum() - myGrades.getLowGrade();
-		newavg = newsum/(myGrades.getNumGrades() - 1);
+		newavg = newsum/myGrades.getNumGrades();
 		return newavg;
 	}
 	
@@ -92,8 +93,6 @@ public class Student implements Comparable<Student>
 	}
 	public String toString()
 	{
-		String output = "";
-		output = myName + " = " + myGrades;
-		return output;
+		return "";
 	}	
 }

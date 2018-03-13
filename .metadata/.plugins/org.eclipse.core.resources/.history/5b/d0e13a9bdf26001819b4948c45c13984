@@ -93,7 +93,7 @@ public class Student implements Comparable<Student>
 	public String toString()
 	{
 		String output = "";
-		output = myName + " = " + myGrades;
+		output = myName + myGrades;
 		return output;
 	}	
 }

@@ -41,9 +41,8 @@ public class Class
 		double classAverage=0.0;
 		for (int i = 0; i < studentList.length; i++){
 			classAverage+= studentList[i].getAverage();
-			
+			classAverage = classAverage/studentList.length;
 		}
-		classAverage = classAverage/studentList.length;
 		return classAverage;
 	}
 	

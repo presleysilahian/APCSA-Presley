@@ -41,9 +41,8 @@ public class Class
 		double classAverage=0.0;
 		for (int i = 0; i < studentList.length; i++){
 			classAverage+= studentList[i].getAverage();
-			
+			classAverage = classAverage/studentList.length;
 		}
-		classAverage = classAverage/studentList.length;
 		return classAverage;
 	}
 	
@@ -60,7 +59,9 @@ public class Class
 				index = i;
 			}
 		}
-		return getStudentAverage(index);
+
+
+		return getStudentAverage(stuName);
 	}
 	
 	public String getStudentName(int stuNum)
@@ -112,7 +113,8 @@ public class Class
 	{
 		String output=""+getClassName()+"\n";
 		for (int i = 0; i < studentList.length; i++){
-			output+= studentList[i] + "  " + studentList[i].getAverage() + "\n";
+			output+= studentList[i];
+			output+= studentList[i].getAverage();
 		}
 		return output;
 	}  	
