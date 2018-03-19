@@ -16,7 +16,7 @@ public class Lab18e
 	public static void main( String args[] ) throws IOException
 	{
 		ArrayList<String> stuff = new ArrayList<String>();
-		Scanner scanny = new Scanner(new File("C:\\Users\\silahianp1916\\Desktop\\APCSA-Presley\\Unit 12\\src\\lab18e.dat"));
+		Scanner scanny = new Scanner("C:\\Users\\silahianp1916\\Desktop\\APCSA-Presley\\Unit 12\\src\\lab18e.dat");
 		int num = scanny.nextInt();
 		scanny.nextLine();
 		while (scanny.hasNextLine())

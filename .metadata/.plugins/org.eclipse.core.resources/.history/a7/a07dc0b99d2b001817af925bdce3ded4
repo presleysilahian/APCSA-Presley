@@ -16,7 +16,6 @@ public class Lab18d
 	public static void main( String args[] ) throws IOException
 	{
 		Scanner file = new Scanner(new File("C:\\Users\\silahianp1916\\Desktop\\APCSA-Presley\\Unit 12\\src\\lab18d.dat"));
-		
 		ArrayList<Word> words = new ArrayList<Word>();
 		int size = file.nextInt();
 		file.nextLine();

@@ -17,7 +17,7 @@ public class Lab18e
 	{
 		ArrayList<String> stuff = new ArrayList<String>();
 		Scanner scanny = new Scanner(new File("C:\\Users\\silahianp1916\\Desktop\\APCSA-Presley\\Unit 12\\src\\lab18e.dat"));
-		int num = scanny.nextInt();
+		int num = scanny.next();
 		scanny.nextLine();
 		while (scanny.hasNextLine())
 		{

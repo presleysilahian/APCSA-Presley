@@ -5,14 +5,14 @@
 //Lab  -
 
 import static java.lang.System.*;
-
-public class Word implements Comparable<Word>
+import java.util.Scanner;
+public class Wordy implements Comparable<Wordy>
 {
 	private String word;
 
-	public Word( String s)
+	public Wordy( String s)
 	{
-
+		word = s;
 
 	}
 
@@ -20,22 +20,26 @@ public class Word implements Comparable<Word>
 	{
 		String vowels = "AEIOUaeiou";
 		int vowelCount=0;
-
-
-
-
-
+		Scanner scan = new Scanner(vowels);
+		Scanner wordy = new Scanner(word);
+		for (int i = 0; i < word.length(); i++){
+			for (int j = 0; j < vowels.length(); j++){
+				if (scan.next().charAt(j) == wordy.next().charAt(i)){
+					vowelCount++;
+				}
+			}
+		}
 
 
 		return vowelCount;
 	}
 
-	public int compareTo(Word rhs)
+	public int compareTo(Wordy rhs)
 	{
+		if (rhs.numVowels() > numVowels()){
+			return 1;
+		}
 
-
-
-	
 		return -1;
 	}
 
