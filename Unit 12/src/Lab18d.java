@@ -31,7 +31,7 @@ public class Lab18d
 				{
 					Word temp = words.get(i);
 					words.set(i, words.get(j));
-					words.set(j, temp);
+					words.set(j, temp); 
 				}
 			}
 		}
