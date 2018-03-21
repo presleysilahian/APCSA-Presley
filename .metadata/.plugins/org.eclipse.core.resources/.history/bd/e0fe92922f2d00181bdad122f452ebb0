@@ -73,10 +73,10 @@ public class ElevensBoard extends Board {
 	@Override
 	public boolean anotherPlayIsPossible() {
 		List<Integer> indexes = cardIndexes();
-		if (containsPairSum11(indexes) || containsJQK(indexes)){
-				return true;
+		if (!containsPairSum11(indexes)) {
+			return containsJQK(indexes);
 		}
-		return false;
+		return true;
 	}
 
 	/**
