@@ -15,19 +15,22 @@ public class Maze
 
 	public Maze()
 	{
-
+		maze = new int[][]{};
 
 	}
 
 	public Maze(int size, String line)
 	{
-
+		
 
 	}
 
 	public boolean hasExitPath(int r, int c)
 	{
-
+		if (r>=0 && c>=0 && r<maze.length && c<maze[r].length && maze[r][c] == 1){
+			maze[r][c] = 'x';
+			
+		}
 		return false;
 	}
 
