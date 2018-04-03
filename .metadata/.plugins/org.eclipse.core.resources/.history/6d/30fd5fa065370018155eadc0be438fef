@@ -52,8 +52,8 @@ public class Pong extends Canvas implements KeyListener, Runnable
 		createBall();
 		
 		//set up variables
-		leftPaddle = new Paddle(10, 244, 10, 70, Color.RED, 4);
-		rightPaddle = new Paddle(760, 244, 10, 70, Color.RED, 4);
+		leftPaddle = new Paddle(10, 244, 10, 70, Color.YELLOW, 4);
+		rightPaddle = new Paddle(760, 244, 10, 70, Color.YELLOW, 4);
 		wall = new Wall(0, 770, 10, 550);
 		keys = new boolean[4];
 		leftScore = 0;
@@ -136,8 +136,8 @@ public class Pong extends Canvas implements KeyListener, Runnable
 			
 			//CREATE NEW BALLS AND PADDLES FOR NEXT ROUND
 			createBall();
-			leftPaddle = new Paddle(10, 244, 10, 70, Color.RED, 4);
-			rightPaddle = new Paddle(760, 244, 10, 70, Color.RED, 4);
+			leftPaddle = new Paddle(10, 244, 10, 70, Color.YELLOW, 4);
+			rightPaddle = new Paddle(760, 244, 10, 70, Color.YELLOW, 4);
 			
 			if(rightScore == 5) {
 				System.out.println("RIGHT WINS");
@@ -166,8 +166,8 @@ public class Pong extends Canvas implements KeyListener, Runnable
 			
 			//CREATE NEW BALLS AND PADDLES FOR NEXT ROUND
 			createBall();
-			leftPaddle = new Paddle(10, 244, 10, 70, Color.RED, 4);
-			rightPaddle = new Paddle(760, 244, 10, 70, Color.RED, 4);
+			leftPaddle = new Paddle(10, 244, 10, 70, Color.YELLOW, 4);
+			rightPaddle = new Paddle(760, 244, 10, 70, Color.YELLOW, 4);
 			
 			if(leftScore == 5) {
 				System.out.println("LEFT WINS");
