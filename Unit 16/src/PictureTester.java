@@ -58,6 +58,34 @@ public class PictureTester
 	  water.fixUnderwater();
 	  water.explore();
   }
+  public static void testMirrorArms()
+  {
+	  Picture snowman = new Picture("snowman.jpg");
+	  snowman.explore();
+	  snowman.mirrorArms();
+	  snowman.explore();
+  }
+  public static void testMirrorGull()
+  {
+	  Picture seagull = new Picture("seagull.jpg");
+	  seagull.explore();
+	  seagull.mirrorGull();
+	  seagull.explore();
+  }
+  public static void testMirrorDiagonal()
+  {
+	  Picture seagull = new Picture("seagull.jpg");
+	  seagull.explore();
+	  seagull.mirrorDiagonal();
+	  seagull.explore();
+  }
+  public static void testCopy()
+  {
+	  Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.copy(beach, 0, 320);
+	  beach.explore();
+  }
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -106,15 +134,15 @@ public class PictureTester
     //testKeepOnlyGreen();
     //testNegate(); 
     //testGrayscale();
-    //testFixUnderwater();
-    //testMirrorVertical();
-    testMirrorTemple();
-    //testMirrorArms();
+    testFixUnderwater();
+    //testMirrorVertical();  
+	//testMirrorTemple();
+    testMirrorArms();
     //testMirrorGull();
-    //testMirrorDiagonal();
+	//testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
