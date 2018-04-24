@@ -88,8 +88,7 @@ public class PictureTester
   }
   public static void testSharpen(int x, int y, int w, int h)
   {
-       Picture redMoto = new Picture("water.jpg");
-       redMoto.explore();
+       Picture redMoto = new Picture("xxxxxxxxx");
        redMoto.sharpen(x,y,w,h);
        redMoto.explore();
   }
@@ -141,15 +140,15 @@ public class PictureTester
     //testKeepOnlyGreen();
     //testNegate(); 
     //testGrayscale();
-    //testFixUnderwater();
+    testFixUnderwater();
     //testMirrorVertical();  
 	//testMirrorTemple();
-    //testMirrorArms();
+    testMirrorArms();
     //testMirrorGull();
 	//testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
@@ -157,6 +156,5 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
-    testSharpen(50,50,500,400);
   }
 }

@@ -310,21 +310,66 @@ public class Picture extends SimplePicture
 	  
 	  for (int row = x; row < w; row++) {
 		  for (int col = y; col < h; col++) {
-			  if (x >= 0 && w < this.getWidth() &&
-	                  y >= 0 && h < this.getHeight()){
-				  pixLeft = this.getPixel(x-1,y-1);
-			      redValue +=((redValue - pixLeft.getRed()/2));
-			      blueValue += ((blueValue - pixLeft.getBlue()/2));
-			      greenValue += ((greenValue - pixLeft.getGreen()/2));
-		    	  avgColor = ((int)pixel.getCol() - (int)pixLeft.getCol()/2);
-		    	  Color newColor = new Color(redValue, greenValue, blueValue);
-		    	  pixel.setColor(newColor);
-			  }
-			 
+	    	  pixLeft = this.getPixel(x-1,y-1);
+		      redValue +=((redValue - pixLeft.getRed()/2));
+		      blueValue += ((blueValue - pixLeft.getBlue()/2));
+		      greenValue += ((greenValue - pixLeft.getGreen()/2));
+	    	  avgColor = ((int)pixel.getCol() - (int)pixLeft.getCol()/2);
+	    	  Color newColor = new Color(redValue, greenValue, blueValue);
+	    	  pixel.setColor(newColor);
 	      }
 	  }
+	  System.out.println(pixLeft.getCol());
+	  System.out.println(pixel.getCol());
   }
-  
+  public void blur(int numPixels)
+	    {
+	      Pixel pixel = null;
+	      Pixel samplePixel = null;
+	      int redValue = 0;
+	      int greenValue = 0;
+	      int blueValue = 0;
+	      int count = 0;
+
+	      // loop through the pixels
+	      for (int x=0; x < this.getWidth(); x++) {
+	        for (int y=0; y < this.getHeight(); y++) {
+
+	          // get the current pixel
+	        	pixel = this.getPixel(x,y);
+
+	          // reset the count and red, green, and blue values
+	          count = 0;
+	          redValue = greenValue = blueValue = 0;
+
+	          // loop through pixel numPixels before x to numPixels after x
+	          for (int xSample = x - numPixels; 
+	               xSample <= x + numPixels; 
+	               xSample++) {
+	            for (int ySample = y - numPixels; 
+	                 ySample <= y + numPixels;
+	                 ySample++) {
+
+	              // check that we are in the range of acceptable pixels
+	              if (xSample >= 0 && xSample < this.getWidth() &&
+	                  ySample >= 0 && ySample < this.getHeight()) {
+	                samplePixel = this.getPixel(xSample,ySample);
+	                redValue = redValue + samplePixel.getRed();
+	                greenValue = greenValue + samplePixel.getGreen();
+	                blueValue = blueValue + samplePixel.getBlue();
+	                count = count + 1;
+	              }
+	            }
+	          }
+
+	          // use average color of surrounding pixels
+	          Color newColor = new Color(redValue / count,
+	                                     greenValue / count,
+	                                     blueValue / count);
+	          pixel.setColor(newColor);
+	        }
+	      }
+	    }
 	      
   public void mirrorArms()
   {
