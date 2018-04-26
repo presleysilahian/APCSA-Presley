@@ -47,9 +47,9 @@ public class Bullets
 				ammo.remove(i);
 	}
 
-	public List<Ammo> getAmmo()
+	public List<Ammo> getList()
 	{
-		return ammo;
+		return null;
 	}
 
 	public String toString()
