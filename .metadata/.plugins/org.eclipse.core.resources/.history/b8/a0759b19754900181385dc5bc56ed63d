@@ -29,11 +29,16 @@ public class AlienHorde
 		aliens.add(al);
 	}
 
-	
+	public void drawEmAll( Graphics window )
+	{
+		for(Alien al : aliens)
+			a1.draw(window);
+	}
 
-	public void moveEmAll() {
+	public void moveEmAll()
+	{
 		tick++;
-		for (Alien al : aliens) {
+		for (Alien al : aliens){
 			if (tick <= 120)
 				al.move("RIGHT");
 			else if (tick <= 320)
@@ -47,13 +52,7 @@ public class AlienHorde
 		}
 	}
 
-	public void drawEmAll(Graphics window) {
-		for (Alien al : aliens)
-			al.draw(window);
-	}
-
 	public void removeDeadOnes(List<Ammo> shots)
-	{
 		for (int i = 0; i < shots.size(); i++)
 			for (int j = 0; j < aliens.size(); j++)
 				try {
@@ -64,20 +63,10 @@ public class AlienHorde
 					}
 				} catch (Exception e) {
 				}
-	}
-	public void checkShipDeath(Ship ship) {
-		for (int i = 0; i < aliens.size(); i++)
-			if (ship.isCollidingMT(aliens.get(i))) {
-				System.out.println("You lose.");
-				System.exit(0);
-			}
-	}
-	public int getSize() {
-		return size;
-	}
+		}	
 
-	public String toString() {
+	public String toString()
+	{
 		return "";
 	}
-
 }
