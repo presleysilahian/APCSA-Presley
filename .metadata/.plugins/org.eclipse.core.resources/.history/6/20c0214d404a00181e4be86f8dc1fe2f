@@ -114,8 +114,6 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 				if (shots.getAmmo().get(i).isColliding(horde.getAliens().get(j))) {
 					shots.getAmmo().remove(i--);
 					horde.getAliens().remove(j--);
-					horde.decSize();
-					
 				}
 		for (int i = 0; i < horde.getAliens().size(); i++)
 			if (ship.isColliding(horde.getAliens().get(i))) {
@@ -125,7 +123,6 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 		horde.moveEmAll();
 		shots.moveEmAll();
 		shots.cleanEmUp();
-		horde.checkSize();
 
 		if (horde.getSize() == 0) {
 			System.out.println("You win!");

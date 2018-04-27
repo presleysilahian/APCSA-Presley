@@ -24,16 +24,6 @@ public class AlienHorde
 		this.size = size;
 	}
 
-	public void decSize()
-	{
-		size--;
-	}
-	public void checkSize()
-	{
-		if (size == 0){
-		}
-	}
-	
 	public void add(Alien al)
 	{
 		aliens.add(al);
