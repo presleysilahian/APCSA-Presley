@@ -1,0 +1,22 @@
+import java.awt.image.BufferedImage;
+import java.net.URL;
+
+import javax.imageio.ImageIO;
+
+public class Shield {
+	private BufferedImage image;
+
+
+	public Shield(int x, int y, int w, int h, int s)
+	{
+		try
+		{
+			URL url = getClass().getResource("shield.png");
+			image = ImageIO.read(url);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+}
