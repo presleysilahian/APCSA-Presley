@@ -122,21 +122,16 @@ public class Pong extends Canvas implements KeyListener, Runnable
 			}
 		
 		//IF BALL COLLIDE PADDLE
-		
-		if(ball.getX() >= Paddle.getX()-Paddle.getWidth()
-				&& ball.getY() >= Paddle.getY()
-				&& (ball.getY() <= Paddle.getY()+Paddle.getHeight()
-				|| ball.getY()+ball.getHeight() >= Paddle.getY()
-				&& ball.getY()+ball.getHeight() < Paddle.getY()+Paddle.getHeight()))
-		{
-			//no idea what this is
-			if(ball.getX() >= Paddle.getX()-Paddle.getWidth()+Math.abs(ball.getXSpeed()))
-				ball.setYSpeed(-ball.getYSpeed());
-			//make ball bounce
-			else
+		if(ball.didCollideLeft1(Paddle) && ball.didCollideRight1(Paddle) && ball.didCollideBottom1(Paddle) && ball.didCollideTop1(Paddle)){
+			if(ball.didCollideLeft1(Paddle) || ball.didCollideRight1(Paddle)){
 				ball.setXSpeed(-ball.getXSpeed());
-			if(play == 'a') subIncSpeed();
+			}
+			if(ball.didCollideTop1(Paddle) || ball.didCollideBottom1(Paddle)){
+				ball.setYSpeed(-ball.getYSpeed());
+			}
 		}
+		
+		
 			
 		//MOVEMENT FOR PADDLES
 		if(keys[0] == true) {//right player

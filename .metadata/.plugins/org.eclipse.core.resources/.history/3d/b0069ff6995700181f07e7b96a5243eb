@@ -122,7 +122,6 @@ public class Pong extends Canvas implements KeyListener, Runnable
 			}
 		
 		//IF BALL COLLIDE PADDLE
-		
 		if(ball.getX() >= Paddle.getX()-Paddle.getWidth()
 				&& ball.getY() >= Paddle.getY()
 				&& (ball.getY() <= Paddle.getY()+Paddle.getHeight()

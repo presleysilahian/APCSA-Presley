@@ -427,7 +427,6 @@ public class Picture extends SimplePicture
   		}
   	}
   	System.out.println(count);
-  	}
   }
   /**
   * Method to decode a message hidden in the

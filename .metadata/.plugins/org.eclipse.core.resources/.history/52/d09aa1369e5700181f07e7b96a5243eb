@@ -166,7 +166,6 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
-    //testSharpen(50,50,500,400);
-	testEncodeAndDecode();
+    testSharpen(50,50,500,400);
   }
 }
