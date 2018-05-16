@@ -17,7 +17,6 @@ INDEX VERSION 1.130+C:\Users\silahianp1916\Desktop\APCSA-Presley\.metadata\.plug
 1470829363.index
 2730403015.index
 1248407149.index
-2479916396.index
 1001911677.index
 2330857962.index
 2430934472.index

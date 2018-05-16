@@ -63,13 +63,8 @@ public class Ball extends Block implements Collidable
 	public int getYSpeed() {
 		return ySpeed;
 	}
-
-	public void moveAndDraw(Graphics window)
-	{
-		Color temp = getColor();
-		draw(window, Color.WHITE);
-		setPos(getX()+getXSpeed(), getY()+getYSpeed());
-		draw(window, temp);
+	public void update(Graphics window) {
+		setPos(getX() + xSpeed, getY() + ySpeed);
 	}
 
 	public boolean equals(Object obj)
@@ -78,95 +73,5 @@ public class Ball extends Block implements Collidable
 		return super.equals(other)
 				&& this.getXSpeed() == other.getXSpeed()
 				&& this.getYSpeed() == other.getYSpeed();
-	}
-	
-	public boolean didCollideLeft(Wall obj) {
-		Wall other = (Wall) obj;
-		return this.getX() <= other.getLeft();
-	}
-	
-	public boolean didCollideRight(Wall obj) {
-		Wall other = (Wall) obj;
-		return this.getX() >= other.getRight();
-	}
-	
-	public boolean didCollideTop(Wall obj) {
-		Wall other = (Wall) obj;
-		return this.getY() <= other.getTop();
-	}
-
-	public boolean didCollideBottom(Wall obj) {
-		Wall other = (Wall) obj;
-		return this.getY()+9 /*because the bottom wall is screwed up*/ >= other.getBottom();
-	}
-	public boolean didCollideLeft1(Object obj) {
-		Paddle other = (Paddle) obj;
-		return this.getX() <= other.getX()-15;
-	}
-	
-	public boolean didCollideRight1(Object obj) {
-		Paddle other = (Paddle) obj;
-		return this.getX() >= other.getX()+15;
-	}
-	
-	public boolean didCollideTop1(Object obj) {
-		Paddle other = (Paddle) obj;
-		return this.getY() <= other.getY()+15;
-	}
-
-	public boolean didCollideBottom1(Object obj) {
-		Paddle other = (Paddle) obj;
-		return this.getY() >= other.getY()-15;
-	}
-	public String toString() {
-		return super.toString() +" "+ getXSpeed() +" "+ getYSpeed();
-	}
-
-	@Override
-	public boolean didCollideLeft(Object obj) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean didCollideRight(Object obj) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean didCollideTop(Object obj) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean didCollideBottom(Object obj) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean didCollideLeft1(Paddle obj) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean didCollideRight1(Paddle obj) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean didCollideTop1(Paddle obj) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean didCollideBottom1(Paddle obj) {
-		// TODO Auto-generated method stub
-		return false;
 	}
 }

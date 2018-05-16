@@ -10,8 +10,8 @@ import java.awt.Component;
 public class TheGame extends JFrame
 {
 	private static final long serialVersionUID = 1L;
-	private static final int WIDTH = 800;
-	private static final int HEIGHT = 650;
+	public static final int WIDTH = 800;
+	public static final int HEIGHT = 650;
 
 	public TheGame()
 	{
