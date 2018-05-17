@@ -49,7 +49,7 @@ public class Pong extends Canvas implements KeyListener, Runnable {
 	public Pong() {
 		
 		Reset();
-		level_2();
+		level_1();
 		leftWall = new Wall(0, 0, 10, 550, Color.BLACK);
 		rightWall = new Wall(760, 0, 10, 550, Color.BLACK);
 		bottomWall = new Wall(0, 540, 770, 10, Color.BLACK);
