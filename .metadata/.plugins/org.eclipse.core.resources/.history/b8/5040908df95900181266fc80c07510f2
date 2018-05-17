@@ -153,10 +153,10 @@ public class Pong extends Canvas implements KeyListener, Runnable {
 				blocksLeft++;
 			}
 		}
-		int xValRight = 695;
+		int xValRight = 665;
 		int yValRight = 40;
 		for (int i = 0; i < 22; i++){
-			xValRight = 700;
+			xValRight = 665;
 			yValRight+=20;
 			for (int j = 0; j < 2; j++){
 				blocks.add(block = new Block(xValRight, yValRight, 20, 15, Color.GREEN));
